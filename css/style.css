@@ -53,21 +53,14 @@ a {
 /*******************************************/
 
 /**** NAV SECTION ****/ 
-nav, 
-nav figure, 
-nav ul, 
-nav li {
-  display: flex;
-  justify-content: space-between;
-}
-
-nav figure {
-  align-items: center;
-}
-
 nav ul {
-  justify-content: space-around;
-  flex-basis: 60%;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+li.logo  {
+  margin-right: auto;
 }
 
 /**** HERO SECTION ****/
