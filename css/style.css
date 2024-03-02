@@ -72,7 +72,7 @@ li.logo  {
 .image-container-outer, 
 .image-container-middle,
 .image-container-inner,
-figure {
+.hero-section figure {
   display: flex;
 }
 
@@ -87,6 +87,7 @@ figure {
   height: 300px;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .image-container-outer {
@@ -113,8 +114,7 @@ figure {
   align-items: center;
 }
 
-figure {
-  display: flex;
+.hero-section figure {
   justify-content: center;
   align-items: center
 }
@@ -125,6 +125,23 @@ figure {
   font-weight: 300;
 }
 
+.hero-text-container > section {
+  gap: 5%;
+}
+
+.hero-text-container .rectangle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+.rectangle-button {
+  width: 200px;
+  height: 50px;
+  background: gray;
+  color: white;
+  border-radius: 5%;
+}
