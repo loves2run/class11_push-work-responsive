@@ -57,6 +57,7 @@ nav ul {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 li.logo  {
@@ -82,12 +83,18 @@ figure {
   justify-content: space-around;
 }
 
+.hero-section {
+  height: 300px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .image-container-outer {
   align-items: center;
   height: 85%;
   background: grey;
   border-radius: 10%;
-  flex-basis: 35%;
+  flex-basis: 30%;
 }
 
 .image-container-middle {
@@ -114,13 +121,10 @@ figure {
 
 .fa-image {
   color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
-.hero-section {
-  height: 300px;
-  justify-content: space-between;
-  align-items: center;
-}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
