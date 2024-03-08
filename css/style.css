@@ -30,6 +30,10 @@ body {
   padding-left: 3%;
 }
 
+main {
+  background: 	#F5F5F5;
+}
+
 img {
   width: 100%;
 }
@@ -48,19 +52,27 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 3vw, 4rem);
+  margin: 1.25rem 0;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.3rem, 2.8vw, 3rem);
+  margin: 1rem 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  margin: .8rem 0;
 }
 
 h6 {
   font-size: 1.25rem;
+  margin: .5rem 0;
+}
+
+p {
+  margin: .5rem 0;
 }
 
 
@@ -69,11 +81,16 @@ h6 {
 /*******************************************/
 
 /**** NAV SECTION ****/ 
+/* nav {
+  display: flex;
+} */
+
 nav ul {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   padding: 0;
+  align-items: center;
 }
 
 li.logo  {
@@ -100,7 +117,7 @@ li.logo  {
 }
 
 .hero-section {
-  height: 300px;
+  height: 400px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
@@ -135,12 +152,6 @@ li.logo  {
   align-items: center
 }
 
-.fa-image {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
 .hero-text-container > section {
   gap: 5%;
   flex-wrap: wrap;
@@ -158,13 +169,14 @@ li.logo  {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 50px;  
+  margin-bottom: 50px;
 }
 
 .brand-logos img {
   width: auto;
 }
 
-/*** SECTIONS WITH LARGE IMAGE ON L SIDE ***/
+/*** Left Image Styles ***/
 .image-left {
   display: flex;
   justify-content: flex-start;
@@ -180,34 +192,197 @@ li.logo  {
   align-items: center;
 }
 
-.image-left > section:last-child {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.image-left-container {
+.image-left-outer,
+.image-left-inner {
   display: flex;
   width: 90%;
   height: 90%;
-  background: navy;
+  background: gray;
   justify-content: center;
+  align-items: center;
 }
 
-.image-left-container figure {
+.image-left-inner {
+  background: navy;
+  width: 40%;
+  height: 30%;
+}
+
+.image-left-inner figure {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/******************************************
+/*** 50% text section styles ***/
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text-50 {
+  flex-basis: 50%;
+}
+
+.image-left > section:last-child > section {
+  display: flex;
+  gap: 30px;
+}
+
+.section-4-modification {
+  margin: 0 0 10px 0;
+}
+
+/*** section 2 with 50% text on R and 4-pack images on L ***/
+.section-two-container {
+  display: flex;
+  gap: 75px;
+  height: 700px;
+}
+
+.four-pack-image-container {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-container-topandbottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container-top {
+  background: gray;
+  width: 85%;
+  height: 12.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container-bottom {
+  background: #fff;
+  width: 85%;
+  height: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*** centered section ***/
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/*** section 5 - title section with L offset "create an account for free" ***/
+.features-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.features-title-block {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.feature-boxes-container-outer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.feature-boxes-container-row1,
+.feature-boxes-container-row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 15px 15px 0 15px;
+  gap: 2.5%;
+}
+
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  gap: 1%;
+  background-color: #fff;
+  border-radius: 10%;
+  padding: 1rem;
+}
+
+.box2 {
+  justify-content: center;
+  align-items: center;
+}
+
+/*** Quotes Carousel ***/
+.quotes-carousel-container,
+.right-left-arrow-buttons,
+.quotes-carousel-text-outer,
+.quotes-carousel-text-inner {
+  display: flex;
+}
+
+.quotes-carousel-container {
+  margin-bottom: 75px;
+}
+
+.right-left-arrow-buttons {
+  justify-content: center;
+  align-items: center;
+  padding-right: 8%;
+}
+
+.quotes-carousel-text-outer {
+  flex-direction: column;
+  align-items: center;
+}
+/*********************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
 .rectangle-button {
+  display: flex;
   width: 200px;
   height: 50px;
   background: gray;
   color: white;
   border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-4-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.circle-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.fa-image {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+
+i.fa-square {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
 }
