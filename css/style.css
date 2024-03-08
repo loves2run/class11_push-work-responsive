@@ -52,18 +52,23 @@ a {
 }
 
 h1 {
-  font-size: clamp(1.6rem, 3vw, 4rem);
+  font-size: clamp(1.8rem, 3vw, 4rem);
   margin: 1.25rem 0;
 }
 
 h2 {
-  font-size: clamp(1.3rem, 2.8vw, 3rem);
+  font-size: clamp(1.6rem, 2.8vw, 3rem);
   margin: 1rem 0;
 }
 
 h3 {
-  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
   margin: .8rem 0;
+}
+
+h4 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  margin: .6rem 0;
 }
 
 h6 {
@@ -328,7 +333,8 @@ li.logo  {
 
 /*** Quotes Carousel ***/
 .quotes-carousel-container,
-.right-left-arrow-buttons,
+.right-arrow-button,
+.left-arrow-button,
 .quotes-carousel-text-outer,
 .quotes-carousel-text-inner {
   display: flex;
@@ -338,18 +344,35 @@ li.logo  {
   margin-bottom: 75px;
 }
 
-.right-left-arrow-buttons {
+.left-arrow-button,
+.right-arrow-button {
   justify-content: center;
   align-items: center;
   padding-right: 8%;
+}
+
+.right-arrow-button {
+  padding-right: 0;
+  padding-left: 8%;
 }
 
 .quotes-carousel-text-outer {
   flex-direction: column;
   align-items: center;
 }
+
+.quotes-carousel-text-inner {
+  flex-direction: row;
+  min-width: 30%;
+  gap: 8%;
+}
+
+.quotes-author {
+
+}
+
 /*********************************
-/* ADDITIONAL STYLES
+/* Features
 /*******************************************/
 
 .rectangle-button {
@@ -385,4 +408,15 @@ i.fa-square {
   display: flex;
   align-items: center;
   font-size: 2rem;
+}
+
+.circle-arrows-light {
+  font-size: 2rem;
+}
+
+.gray-circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: gray;
 }
