@@ -26,12 +26,9 @@ html {
 }
 
 body {
+  background: 	#F5F5F5;
   padding-right: 3%;
   padding-left: 3%;
-}
-
-main {
-  background: 	#F5F5F5;
 }
 
 img {
@@ -44,6 +41,7 @@ figure {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 a {
@@ -227,7 +225,7 @@ li.logo  {
 }
 
 .text-50 {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .image-left > section:last-child > section {
@@ -242,35 +240,38 @@ li.logo  {
 /*** section 2 with 50% text on R and 4-pack images on L ***/
 .section-two-container {
   display: flex;
-  gap: 75px;
+  gap: 12%;
   height: 700px;
 }
 
 .four-pack-image-container {
   display: flex;
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 .image-container-topandbottom {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .image-container-top {
   background: gray;
-  width: 85%;
+  width: 77%;
   height: 12.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .image-container-bottom {
   background: #fff;
-  width: 85%;
+  width: 77%;
   height: 6.25rem;
   display: flex;
   flex-direction: column;
@@ -341,7 +342,8 @@ li.logo  {
 }
 
 .quotes-carousel-container {
-  margin-bottom: 75px;
+  background-color: #fff;
+  padding-bottom: 75px;
 }
 
 .left-arrow-button,
@@ -375,6 +377,92 @@ li.logo  {
 
 .quotes-title {
   font-size: 1.2rem;
+}
+
+
+/*** contact us section ***/
+.contact-us-container,
+.contact-us-text,
+.contact-us-buttons {
+  display: flex;
+}
+
+.contact-us-container {
+  background-color: navy;
+  justify-content: space-around;
+  height: 185px;
+}
+
+.contact-us-text {
+  color: #fff;
+  font-weight: 400;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-us-text h6 {
+  color: gray;
+}
+
+.contact-us-buttons {
+  align-items: center;
+  gap: 5%;
+}
+
+/*** footer ***/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 375px;
+  margin-top: 50px;
+}
+
+footer * {
+  color: gray;
+}
+
+footer h6,
+footer i {
+  color: #000;
+}
+
+.contact-info-container p {
+  margin-top: 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+}
+
+.column3 {
+  margin-top: 48px;
+}
+
+.contact-info-container {
+  width: 20%;
+}
+
+.footer-column-last {
+  width: 15%;
+}
+
+.contact-info-inner {
+  display: flex;
+  gap: 10%;
+}
+
+footer li {
+  color: gray;
+  margin: 10px 0;
+}
+
+.socials {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
 }
 
 /*********************************
